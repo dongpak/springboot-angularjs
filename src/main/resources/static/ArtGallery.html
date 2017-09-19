@@ -1,31 +1,40 @@
 <div>
+	<style>
+		div.frame {
+			float: left;
+			margin: 10px;
+			width: 200px;
+		}
+
+		div.frame img:hover {
+    		border-style: ridge;
+    		border-color: white;
+		}
+
+		div.frame img {
+    		width: 100%;
+    		height: auto;
+    		margin: 5px;
+    		border-style: groove;
+			border-color: lime;
+			border-width: 2px;
+		}
+
+		div.metadata {
+    		padding: 15px;
+    		text-align: center;
+		}
+	</style>
   	<h1>Art Gallery</h1>
   	<p>I am pleased to present drawings of my children.</p>
   	<p>Hope you all enjoy them as much as I do.</p>
   	
-  	<div>
-  		<img src="image/Castell.png"/>
+  	<div ng-repeat="item in $ctrl.images" class="frame">
+  		<a href="">
+  			<img src="{{'image/' + item.filename}}">
+  		</a>
+  		<div class="metadata">
+  			<p>{{item.title}} by {{item.author}}</p>
+  		</div>
   	</div>
-  	<div>
-  		<img src="image/catststtststtss.png"/>
-  	</div>
-  	<div>
-  		<img src="image/errfff.png"/>
-  	</div>
-  	<div>
-  		<img src="image/Eurika.jpg"/>
-  	</div>
-  	<div>
-  		<img src="image/foxAndGirl.jpg"/>
-  	</div>
-  	<div>
-  		<img src="image/heartOfGold.jpg"/>
-  	</div>
-  	<div>
-  		<img src="image/threeAgain.png"/>
-  	</div>
-  	<div>
-  		<img src="image/winterPatrol.jpg"/>
-  	</div>
-  	</table>
 </div>

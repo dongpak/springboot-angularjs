@@ -48,7 +48,48 @@ angular.module('simpsoluApp').component('simpsoluWhatIsJava', {
 angular.module('simpsoluApp').component('simpsoluArtGallery', {
 	templateUrl: "/ArtGallery.html",
 	controller: function() {
-		this.selection = 1;		// main page
+		this.images = [
+			{
+				title: "Castell",
+				author: "Hannah",
+				filename: "Castell.png"
+			},
+			{
+				title: "Cats Everywhere",
+				author: "Hannah",
+				filename: "catststtststtss.png"
+			},
+			{
+				title: "Errfff",
+				author: "Hannah",
+				filename: "errfff.png"
+			},
+			{
+				title: "Eurika",
+				author: "Hannah",
+				filename: "Eurika.jpg"
+			},
+			{
+				title: "Fox and Girl",
+				author: "Hannah",
+				filename: "foxAndGirl.jpg"
+			},
+			{
+				title: "Heart of Gold",
+				author: "Hannah",
+				filename: "heartOfGold.jpg"
+			},
+			{
+				title: "Three Again",
+				author: "Hannah",
+				filename: "threeAgain.png"
+			},
+			{
+				title: "Winter Partrol",
+				author: "Hannah",
+				filename: "winterPatrol.jpg"
+			}
+		]
 	}
 });
 
