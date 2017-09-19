@@ -1,0 +1,8 @@
+<ul>
+	<li ng-repeat="item in $ctrl.selections">
+		<a href="#!/{{item.route}}">
+			{{item.name}}
+			<img ng-hide="!item.image" align="center" height="30px" width="30px" src="image/{{item.image}}"/>
+		</a>		
+	</li>
+</ul>

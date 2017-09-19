@@ -1,15 +1,12 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 	<head>
-		<meta charset="UTF-8">
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>
-  <script src="index.js"></script>
-  <script src="simpsolu.js"></script>
-  <script type="text/javascript">
-    // angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
-  </script>
-    	<style>
+		<meta charset="UTF-8"></meta>
+  		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>
+  		<script src="index.js"></script>
+  		<script src="simpsolu.js"></script>
+		<style>
 div.main { 
     width: 100%;
 	height: 100%;
@@ -72,12 +69,7 @@ article {
    				<h1>Simple Solutions In Cloud</h1>
 			</header>
 			<nav>
-				<ul>
-					<li><a href="#!/Home">Home</a></li>
-					<li><a href="#!/ArtGallery">Art Gallery <img align="center" height="30px" width="30px" src="image/Castell.png"></a></li>    									
-				    <li><a href="#!/CloudComputing">Cloud Computing <img align="center" height="30px" width="30px" src="image/CloudMonkey.gif"></a></li>
-    				<li><a href="#!/WhatIsJava">What is Java? <img align="center" height="30px" width="30px" src="image/icons8-Java-48.png"></a></li>
-  				</ul>
+				<simpsolu-navigation/>
 			</nav>
 			<article style="overflow: auto">
 			  	<div ng-view/>

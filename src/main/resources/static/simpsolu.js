@@ -20,9 +20,44 @@ angular.module('simpsoluApp').config(['$locationProvider', '$routeProvider',
         .when('/ArtGallery', {
         	template: '<simpsolu-art-gallery/>'
         })
+        .when('/VaadinComparison', {
+        	template: '<simpsolu-vaadin-comparison/>'
+        })
         .otherwise('/');
     }
 ]);
+
+angular.module('simpsoluApp').component('simpsoluNavigation', {
+	templateUrl: "/Navigation.html",
+	controller: function() {
+		this.selections = [
+			{
+				name: "Home",
+				route: "Home",
+			},
+			{
+				name: "Art Gallery",
+				route: "ArtGallery",
+				image: "Castell.png"
+			},
+			{
+				name: "Cloud Computing",
+				route: "CloudComputing",
+				image: "CloudMonkey.gif"
+			},
+			{
+				name: "What is Java?",
+				route: "WhatIsJava",
+				image: "icons8-Java-48.png"
+			},
+			{
+				name: "Vaadin Comparison",
+				route: "VaadinComparison"				
+			}
+		]
+	}
+});
+
 
 angular.module('simpsoluApp').component('simpsoluMainArticle', {
 	templateUrl: "/SimpSolu.html",			
@@ -90,6 +125,13 @@ angular.module('simpsoluApp').component('simpsoluArtGallery', {
 				filename: "winterPatrol.jpg"
 			}
 		]
+	}
+});
+
+angular.module('simpsoluApp').component('simpsoluVaadinComparison', {
+	templateUrl: "/VaadinComparison.html",
+	controller: function() {
+		this.selection = 1;		// main page
 	}
 });
 
