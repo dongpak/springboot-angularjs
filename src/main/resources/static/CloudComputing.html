@@ -1,67 +1,91 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title></title>
-	<meta name="generator" content="LibreOffice 5.2.7.2 (Linux)"/>
-	<meta name="author" content="Dong Pak"/>
-	<meta name="created" content="00:00:00"/>
-	<meta name="changed" content="2017-09-05T14:49:42.274199010"/>
+<div>
 	<style type="text/css">
 		@page { margin: 0.79in }
 		p { margin-bottom: 0.1in; direction: ltr; color: #000000; line-height: 120%; orphans: 0; widows: 0 }
-		p.western { font-family: "Liberation Serif", "Times New Roman", serif; font-size: 12pt; so-language: en-US }
+		p.western { font-family: "Liberation Serif", "Times New Roman", serif; font-size: 12pt; so-language: en-US; word-wrap: normal }
 		p.cjk { font-family: "Source Han Sans CN Normal"; font-size: 12pt; so-language: zh-CN }
 		p.ctl { font-family: "Lohit Devanagari"; font-size: 12pt; so-language: hi-IN }
 		a:link { so-language: zxx }
 	</style>
-</head>
-<body lang="en-US" text="#000000" dir="ltr">
-<p class="western">My first experience with cloud computing was with
-Amazon Web Services.  Here is what I did:</p>
-<ol>
-	<li/>
-<p class="western">Created my first EC2 instance to run Ubuntu
-	in a t2.micro instance type.</p>
-	<li/>
-<p class="western">Created a security group to allow SSH
-	connection to my EC2 instance.</p>
-	<li/>
-<p class="western">Created a security group to allow HTTP
-	(8080) connection to my EC2 instance.</p>
-	<li/>
-<p class="western">Created a security group to allow HTTPS
-	connection to my load balancer.</p>
-	<li/>
-<p class="western">Configured my EC2 instance to run Tomcat.</p>
-	<li/>
-<p class="western">Created a Hosted Zone in Route 53.  
+	<h1>Cloud Computing</h1>
+	<p class="western">
+	My first experience with cloud computing was with Amazon Web Services.
 	</p>
-	<li/>
-<p class="western">Setup my DNS registrar to point to the name
-	servers (NS) associated with the created Hosted Zone.  
+	<p>  Here is what I did:</p>
+	<ol>
+		<li>
+			<p class="western">
+			Created my first EC2 instance to run Ubuntu in a t2.micro instance type.
+			</p>
+		</li>
+		<li>
+			<p class="western">
+			Created a security group to allow SSH connection to my EC2 instance.
+			</p>
+		</li>
+		<li>
+			<p class="western">
+			Created a security group to allow HTTP (8080) connection to my EC2 instance.
+			</p>
+		</li>
+		<li>
+			<p class="western">
+			Created a security group to allow HTTPS connection to my load balancer.
+			</p>
+		</li>
+		<li>
+			<p class="western">
+			Configured my EC2 instance to run Tomcat.
+			</p>
+		</li>
+		<li>
+			<p class="western">
+			Created a Hosted Zone in Route 53.  
+			</p>
+		</li>
+		<li>
+			<p class="western">
+			Setup my DNS registrar to point to the name servers (NS) associated with the created Hosted Zone.  
+			</p>
+		</li>
+		<li>
+			<p class="western">
+			Created an IAM role with a policy “AmazonEC2ContainerServiceRole” and attached to the EC2 instance.
+			</p>
+		</li>
+		<li>
+			<p class="western">
+			Created an Application Load Balancer with a Listener to route HTTPS requests to port 8080 on my EC2 instance.
+			</p>
+		</li>
+		<li>
+			<p class="western">
+			Associated the Load Balancer with the security group allowing HTTPS connection.
+			</p>
+		</li>
+		<li>
+			<p class="western">
+			Created a new certificate from Amazon Certificate Manager (ACM)
+			</p>
+		</li>
+		<li>
+			<p class="western">
+			Asociated the certificate with the listener.
+			</p>
+		</li>
+		<li>
+			<p class="western">
+			Created an Alias in my Hosted Zone, so requests to my domain gets routed to the load balancer.
+			</p>
+		</li>
+		<li>
+			<p class="western">
+			From a web browser test the configuration by accessing my domain.
+			</p>
+		</li>
+	</ol>
+	<p class="western">
+		<br/>
+		<br/>
 	</p>
-	<li/>
-<p class="western">Created an IAM role with a policy
-	“AmazonEC2ContainerServiceRole” and attached to the EC2 instance.</p>
-	<li/>
-<p class="western">Created an Application Load Balancer with a
-	Listener to route HTTPS requests to port 8080 on my EC2 instance and
-	associated with the security group allowing HTTPS connection.</p>
-	<li/>
-<p class="western">Created a new certificate from Amazon
-	Certificate Manager (ACM) and associated the certificate with the
-	listener.</p>
-	<li/>
-<p class="western">Created an Alias in my Hosted Zone, so
-	requests to my domain gets routed to the load balancer.</p>
-	<li/>
-<p class="western">From a web browser test the configuration
-	by accessing my domain.</p>
-</ol>
-<p class="western"><br/>
-<br/>
-
-</p>
-</body>
-</html>
+</div>
