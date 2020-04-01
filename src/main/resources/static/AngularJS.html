@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html ng-app="messagingApp">
+	<head>
+    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    	<script src="messaging.js"></script>
+    </head>
+	<body>
+	    <div>
+	    	<b>
+	    		This is a simple AngularJS application running in Vaadin's BrowserFrame.<br/>
+	    	    Based on a Hello World like example code, I've built a simple chat application.<br/>
+	    	</b>	    	
+	    </div>
+        <div ng-controller="MessagingController as messages">
+          <label>Enter your name:</label>
+          <input type="text" ng-model="messages.yourName" placeholder="Enter a name here"/>
+          <hr/>
+          <h1>Hello {{messages.yourName}}!</h1>
+   		  <hr/>
+   		  
+          <textarea id="message-area" ng-model="messages.messageArea" rows="12" cols="100" readonly="readonly"></textarea>
+          <form ng-submit="messages.addMessage()">
+          	<input type="text" size="90" ng-model="messages.newMessage" placeholder="Enter your message here"/>
+          	<input class="btn-primary" type="submit" value="Send"/>
+          </form>
+        </div>
+	</body>
+</html>
